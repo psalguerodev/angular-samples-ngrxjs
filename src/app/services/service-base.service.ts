@@ -11,7 +11,7 @@ export class ServiceBaseService {
 
   public getApiUrlGitHub(usernameDefault: string = `1`): string {
     // return `https://api.github.com/users/${usernameDefault}/repos`;
-    return `http://jsonplaceholder.typicode.com/susers/${usernameDefault}`;
+    return `https://jsonplaceholder.typicode.com/users/${usernameDefault}`;
   }
 
   public handleErrorRxjs(error: any): Observable<any> {
