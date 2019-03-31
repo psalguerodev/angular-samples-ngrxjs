@@ -1,16 +1,20 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="app-toolbar">
   <span>SAMPLES</span>
   <div class="example-spacer"></div>
   <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
     <mat-icon>more_vert</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>
+    <button mat-menu-item (click)="nav('home')" >
       <mat-icon>home</mat-icon>
       <span>Samples</span>
     </button>
-    <button mat-menu-item>
-      <mat-icon>dialpad</mat-icon>
+    <button mat-menu-item (click)="openUrlRepo()">
+      <mat-icon>code</mat-icon>
+      <span>GitHub Repo</span>
+    </button>
+    <button mat-menu-item (click)="nav('interceptors')" >
+      <mat-icon>http</mat-icon>
       <span>Interceptors</span>
     </button>
     <button mat-menu-item disabled>

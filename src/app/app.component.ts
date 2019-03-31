@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RxjsService } from './services/rxjs.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { RxjsService } from './services/rxjs.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     // this.rxjsService.intervalMethod();
@@ -16,6 +17,14 @@ export class AppComponent implements OnInit {
     // this.rxjsService.mapMethod();
     // this.rxjsService.filterMapMethod();
     // this.rxjsService.forkJoinMethod();
+  }
+
+  public openUrlRepo(): void {
+    window.open('https://github.com/psalguerodev/ngrxjs', '_blank');
+  }
+
+  public nav(path: string): void {
+    this.router.navigate([path]);
   }
 
 }
