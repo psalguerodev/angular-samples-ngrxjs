@@ -1,21 +1,64 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mat-toolbar color="primary">
+  <span>SAMPLES</span>
+</mat-toolbar>
 
-<router-outlet></router-outlet>
+<!-- fxLayoutAlign="center" -->
+<div class="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="0.4%" fxLayoutAlign="center center">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">Interval - rxjs</mat-card-title>
+      <mat-card-subtitle>Timer observable | 10 seconds </mat-card-subtitle>
+    </mat-card-header>
+    <!-- <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content> -->
+    <mat-card-actions fxLayoutAlign="center center">
+      <button (click)="rxjsService?.intervalMethod()"  mat-stroked-button color="primary">EXECUTE</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">FromEvent - rxjs</mat-card-title>
+      <mat-card-subtitle>Event Dom | Mouse Event example</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions fxLayoutAlign="center center">
+      <button (click)="rxjsService?.fromEventMethod()" mat-stroked-button color="primary">EXECUTE</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">Map Operator - rxjs</mat-card-title>
+      <mat-card-subtitle>Mapping result</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions fxLayoutAlign="center center">
+      <button (click)="rxjsService?.mapMethod()"  mat-stroked-button color="primary">EXECUTE</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">Filter Operator - rxjs</mat-card-title>
+      <mat-card-subtitle>Filter results of response</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions fxLayoutAlign="center center">
+      <button (click)="rxjsService?.filterMapMethod()" mat-stroked-button color="primary">EXECUTE</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">ForkJoin - rxjs</mat-card-title>
+      <mat-card-subtitle>Multiple request</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions fxLayoutAlign="center center">
+      <button (click)="rxjsService?.forkJoinMethod()" mat-stroked-button color="primary">EXECUTE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
