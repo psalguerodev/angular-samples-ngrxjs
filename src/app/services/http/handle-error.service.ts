@@ -9,8 +9,8 @@ import {
   HttpErrorResponse
 } from '@angular/common/http';
 
-import { Observable, throwError } from 'rxjs';
-import { map, catchError, retry } from 'rxjs/operators';
+import { Observable, throwError, timer, of } from 'rxjs';
+import { map, catchError, retry, retryWhen, delay, tap, delayWhen, filter, concatMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +28,21 @@ export class HandleErrorService implements HttpInterceptor {
     request = request.clone({ headers: request.headers.set('Accept', 'application/json') });
 
     return next.handle(request).pipe(
-      retry(2),
+      retryWhen( errors => errors.pipe(
+        delay(1500),
+        tap((errorStatus: HttpErrorResponse) => {
+          console.log(`Status `, errorStatus.status );
+          console.log('Retrying...');
+        }),
+        concatMap((error: HttpErrorResponse, count: number) => {
+          if (count < 3 && (error.status === 404 || error.status === 500)) {
+            console.log(`Counts ${count} of retry request delay ${3000}`);
+            return of(error.status);
+          }
+
+          return throwError(error);
+        })
+      )),
       map((event: HttpEvent<any>) => {
           if (event instanceof HttpResponse) {
               console.log('event--->>>', event);
@@ -42,6 +56,7 @@ export class HandleErrorService implements HttpInterceptor {
               reason: error && error.message ? error.message : '',
               status: error.status
           };
+
           console.log('Error Intercept: ', data);
           return throwError(error);
       }));
