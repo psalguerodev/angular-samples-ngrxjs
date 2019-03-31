@@ -18,7 +18,9 @@
       </p>
     </mat-card-content> -->
     <mat-card-actions fxLayoutAlign="center center">
-      <button (click)="rxjsService?.intervalMethod()" mat-stroked-button color="primary">EXECUTE</button>
+      <button matTooltip="10 SECONDS TO DEACTIVATE"
+              (click)="rxjsService?.intervalMethod()" 
+              mat-stroked-button color="primary">EXECUTE</button>
     </mat-card-actions>
   </mat-card>
   <mat-card class="example-card">
@@ -28,7 +30,9 @@
       <mat-card-subtitle>Event Dom | Mouse Event example</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions fxLayoutAlign="center center">
-      <button (click)="rxjsService?.fromEventMethod()" mat-stroked-button color="primary">EXECUTE</button>
+      <button matTooltip="UPPER CORNER LEFT TO DEACTIVATE"
+              (click)="rxjsService?.fromEventMethod()" 
+              mat-stroked-button color="primary">EXECUTE</button>
     </mat-card-actions>
   </mat-card>
   <mat-card class="example-card">
@@ -58,7 +62,9 @@
       <mat-card-subtitle>Multiple request</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions fxLayoutAlign="center center">
-      <button (click)="rxjsService?.forkJoinMethod()" mat-stroked-button color="primary">EXECUTE</button>
+      <button matTooltip="ALL THE CORRECT REQUEST TO ANSWER"
+              (click)="rxjsService?.forkJoinMethod()" 
+              mat-stroked-button color="primary">EXECUTE</button>
     </mat-card-actions>
   </mat-card>
 </div>

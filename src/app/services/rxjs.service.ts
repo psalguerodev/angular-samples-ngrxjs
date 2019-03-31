@@ -46,7 +46,7 @@ export class RxjsService {
 
     const squaredNumbers = expresion(nums);
     squaredNumbers.subscribe(value => {
-      console.log(value);
+      console.log(`Map value ${value}`);
     });
   }
 
