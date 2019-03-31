@@ -1,0 +1,67 @@
+<!-- fxLayoutAlign="center" -->
+<div class="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="0.4%" fxLayoutAlign="center center">
+  <mat-card class="example-card" >
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">Interval - rxjs
+      </mat-card-title>
+      <mat-card-subtitle>Timer observable | 10 seconds </mat-card-subtitle>
+    </mat-card-header>
+    <!-- <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content> -->
+    <mat-card-actions fxLayoutAlign="center center">
+      <button matTooltip="10 SECONDS TO DEACTIVATE"
+              (click)="rxjsService?.intervalMethod()" 
+              mat-stroked-button color="primary">EXECUTE</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">FromEvent - rxjs</mat-card-title>
+      <mat-card-subtitle>Event Dom | Mouse Event example</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions fxLayoutAlign="center center">
+      <button matTooltip="UPPER CORNER LEFT TO DEACTIVATE"
+              (click)="rxjsService?.fromEventMethod()" 
+              mat-stroked-button color="primary">EXECUTE</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">Map Operator - rxjs</mat-card-title>
+      <mat-card-subtitle>Mapping result</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions fxLayoutAlign="center center">
+      <button (click)="rxjsService?.mapMethod()" mat-stroked-button color="primary">EXECUTE</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">Filter Operator - rxjs</mat-card-title>
+      <mat-card-subtitle>Filter results of response</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions fxLayoutAlign="center center">
+      <button (click)="rxjsService?.filterMapMethod()" mat-stroked-button color="primary">EXECUTE</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">ForkJoin - rxjs</mat-card-title>
+      <mat-card-subtitle>Multiple request</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions fxLayoutAlign="center center">
+      <button matTooltip="ALL THE CORRECT REQUEST TO ANSWER"
+              (click)="rxjsService?.forkJoinMethod()" 
+              mat-stroked-button color="primary">EXECUTE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

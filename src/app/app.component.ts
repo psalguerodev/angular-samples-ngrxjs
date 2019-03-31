@@ -8,7 +8,7 @@ import { RxjsService } from './services/rxjs.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(public rxjsService: RxjsService) {}
+  constructor() {}
 
   ngOnInit() {
     // this.rxjsService.intervalMethod();
