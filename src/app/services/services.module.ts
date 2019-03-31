@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RxjsService } from './rxjs.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HandleErrorService } from './http/handle-error.service';
 
 @NgModule({
   declarations: [],
@@ -13,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    RxjsService
+    RxjsService,
+    { provide: HTTP_INTERCEPTORS, useClass: HandleErrorService, multi: true }
   ]
 })
 export class ServicesModule { }

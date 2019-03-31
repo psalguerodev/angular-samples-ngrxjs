@@ -1,21 +1,17 @@
 import { Injectable } from '@angular/core';
 
-import { interval, fromEvent, of, forkJoin, Observable, throwError } from 'rxjs';
-import { map, filter, catchError, retry } from 'rxjs/operators';
+import { interval, fromEvent, of, forkJoin, Observable, throwError, from } from 'rxjs';
+import { map, filter, catchError, retry, mergeMap, delay } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
+import { ServiceBaseService } from './service-base.service';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class RxjsService {
+export class RxjsService extends ServiceBaseService {
 
-
-  constructor(private http: HttpClient) { }
-
-  private getApiUrlGitHub(usernameDefault: string = `psalguerodev`): string {
-    return `https://api.github.com/users/${usernameDefault}/repos`;
-  }
+  constructor(protected http: HttpClient) { super(http); }
 
   intervalMethod(): void {
     const secondsCounter = interval(1000);
@@ -64,11 +60,11 @@ export class RxjsService {
 
   forkJoinMethod(): void {
     const reposUriPsalgueroDev: Observable<any>  = this.http.get(this.getApiUrlGitHub());
-    const reposUriIn28Minutes: Observable<any>  = this.http.get(this.getApiUrlGitHub('in28minutes'));
+    const reposUriIn28Minutes: Observable<any>  = this.http.get(this.getApiUrlGitHub('2'));
 
     const subscription = forkJoin([reposUriPsalgueroDev, reposUriIn28Minutes])
       .pipe(
-        retry(2),
+        // retry(2),
         map((value: any) => (value != null && value !== undefined) ? value : false ),
         catchError((err: any) => throwError(`Error API ${err.message}`))
       )
@@ -78,6 +74,33 @@ export class RxjsService {
       });
   }
 
+  mergeMapMethod(): void {
+    // const userNames = from(['psalguerodev', 'in28minutes'])
+    const userNames = from(['1', '2'])
+      .pipe(
+      mergeMap((username: string, index: number) => {
+        const resultMsg: string = `Username value ${username} Index value ${index}`;
+        console.log(resultMsg);
 
+        if (index === 0) {
+          return this.http.get(this.getApiUrlGitHub(username))
+                          .pipe(
+                            // retry(2),
+                            delay(2500),
+                            catchError(this.handleErrorRxjs));
+        }
+
+        return this.http.get(this.getApiUrlGitHub(username))
+                        .pipe(
+                          // retry(2),
+                          catchError(this.handleErrorRxjs));
+
+      })
+    );
+
+    const subscriptionHttp = userNames.subscribe((value) => {
+      console.log('Value Mergemap' , value);
+    });
+  }
 
 }

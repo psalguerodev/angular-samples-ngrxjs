@@ -5,7 +5,8 @@ import { MatToolbarModule,
          MatButtonModule,
          MatTooltipModule,
          MatIconModule,
-         MatMenuModule} from '@angular/material';
+         MatMenuModule,
+         MatDialogModule} from '@angular/material';
 import { CommonModule } from '@angular/common';
 
 
@@ -19,7 +20,8 @@ import { CommonModule } from '@angular/common';
     MatButtonModule,
     MatTooltipModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ],
   exports: [
     MatToolbarModule,
@@ -28,7 +30,8 @@ import { CommonModule } from '@angular/common';
     MatButtonModule,
     MatTooltipModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ]
 })
 export class MaterialModule { }

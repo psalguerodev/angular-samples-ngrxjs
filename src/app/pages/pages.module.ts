@@ -15,6 +15,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MaterialModule,
     FlexLayoutModule
   ],
+  providers: [
+  ],
   exports: [
     RepositoriesComponent,
     MaterialModule,

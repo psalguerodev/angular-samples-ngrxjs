@@ -1,9 +1,10 @@
 <!-- fxLayoutAlign="center" -->
 <div class="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="0.4%" fxLayoutAlign="center center">
-  <mat-card class="example-card" >
+  <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">Interval - rxjs
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">
+        Interval - rxjs
       </mat-card-title>
       <mat-card-subtitle>Timer observable | 10 seconds </mat-card-subtitle>
     </mat-card-header>
@@ -15,27 +16,27 @@
       </p>
     </mat-card-content> -->
     <mat-card-actions fxLayoutAlign="center center">
-      <button matTooltip="10 SECONDS TO DEACTIVATE"
-              (click)="rxjsService?.intervalMethod()" 
-              mat-stroked-button color="primary">EXECUTE</button>
+      <button matTooltip="10 SECONDS TO DEACTIVATE" (click)="rxjsService?.intervalMethod()" mat-stroked-button
+        color="primary">EXECUTE</button>
     </mat-card-actions>
   </mat-card>
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">FromEvent - rxjs</mat-card-title>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">
+        FromEvent - rxjs</mat-card-title>
       <mat-card-subtitle>Event Dom | Mouse Event example</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions fxLayoutAlign="center center">
-      <button matTooltip="UPPER CORNER LEFT TO DEACTIVATE"
-              (click)="rxjsService?.fromEventMethod()" 
-              mat-stroked-button color="primary">EXECUTE</button>
+      <button matTooltip="UPPER CORNER LEFT TO DEACTIVATE" (click)="rxjsService?.fromEventMethod()" mat-stroked-button
+        color="primary">EXECUTE</button>
     </mat-card-actions>
   </mat-card>
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">Map Operator - rxjs</mat-card-title>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">Map
+        Operator - rxjs</mat-card-title>
       <mat-card-subtitle>Mapping result</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions fxLayoutAlign="center center">
@@ -45,7 +46,8 @@
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">Filter Operator - rxjs</mat-card-title>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">Filter
+        Operator - rxjs</mat-card-title>
       <mat-card-subtitle>Filter results of response</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions fxLayoutAlign="center center">
@@ -55,13 +57,25 @@
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">ForkJoin - rxjs</mat-card-title>
-      <mat-card-subtitle>Multiple request</mat-card-subtitle>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">
+        ForkJoin <mat-icon class="icon_color">info</mat-icon> - rxjs</mat-card-title>
+      <mat-card-subtitle>Multiple request | Not tolerable to error</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions fxLayoutAlign="center center">
-      <button matTooltip="ALL THE CORRECT REQUEST TO ANSWER"
-              (click)="rxjsService?.forkJoinMethod()" 
-              mat-stroked-button color="primary">EXECUTE</button>
+      <button matTooltip="ALL THE CORRECT REQUEST TO ANSWER" (click)="rxjsService?.forkJoinMethod()" mat-stroked-button
+        color="primary">EXECUTE</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" matTooltip="Please open console for view results">
+        Mergemap winner <mat-icon class="mat-18 icon_color">done_all</mat-icon> - rxjs</mat-card-title>
+      <mat-card-subtitle>Multiple request | Yes tolerable to error</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions fxLayoutAlign="center center">
+      <button matTooltip="ALL THE CORRECT REQUEST TO ANSWER" (click)="rxjsService?.mergeMapMethod()" mat-stroked-button
+        color="primary">EXECUTE</button>
     </mat-card-actions>
   </mat-card>
 </div>

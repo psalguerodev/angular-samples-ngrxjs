@@ -111,6 +111,8 @@ THE SOFTWARE.
 
 @angular/material/card
 
+@angular/material/dialog
+
 @angular/material/icon
 
 @angular/material/menu
