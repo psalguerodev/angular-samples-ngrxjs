@@ -15,6 +15,11 @@ export class ServiceBaseService {
     return `https://servermock08.herokuapp.com/users/${usernameDefault}`;
   }
 
+  public getUsersUrl() {
+    return `http://localhost:3000/users`;
+  }
+
+
   public handleErrorRxjs(error: any): Observable<any> {
     // return throwError(`Error API ${error.message}`);
     return of([error.message]);

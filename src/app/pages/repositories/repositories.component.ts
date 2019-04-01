@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../../services/users.service';
 
 @Component({
   selector: 'app-repositories',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepositoriesComponent implements OnInit {
 
-  constructor() { }
+  public users: Array<any> = [];
+
+  constructor(private usersService: UsersService) { }
 
   ngOnInit() {
+    this.usersService.mergeMapUsers().subscribe((result: any) => {
+      if (result) {
+        this.users.push(result);
+      }
+    });
   }
 
 }
