@@ -6,7 +6,8 @@ import { MatToolbarModule,
          MatTooltipModule,
          MatIconModule,
          MatMenuModule,
-         MatDialogModule} from '@angular/material';
+         MatDialogModule,
+         MatProgressBarModule} from '@angular/material';
 import { CommonModule } from '@angular/common';
 
 
@@ -21,7 +22,8 @@ import { CommonModule } from '@angular/common';
     MatTooltipModule,
     MatIconModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressBarModule
   ],
   exports: [
     MatToolbarModule,
@@ -31,7 +33,8 @@ import { CommonModule } from '@angular/common';
     MatTooltipModule,
     MatIconModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressBarModule
   ]
 })
 export class MaterialModule { }
