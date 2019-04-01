@@ -15,19 +15,23 @@ export class RepositoriesComponent implements OnInit {
   constructor(private usersService: UsersService) { }
 
   ngOnInit() {
+    this.loadUsers();
+  }
+
+  loadUsers(): void {
     this.loading = true;
+    this.users = [];
     this.usersService.mergeMapUsers()
       .pipe(
         finalize(() => {
           this.loading = false;
+          this.users = this.users.sort();
         })
       )
       .subscribe((result: any) => {
         if (result) {
           this.users.push(result);
-          this.users.sort();
         }
       });
   }
-
 }
