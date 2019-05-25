@@ -1,0 +1,13 @@
+<section class="wave">
+  <h1 class="title">
+    <mat-icon>link</mat-icon> Shortener
+  </h1>
+</section>
+
+<div fxLayout="row wrap" fxLayoutAlign="center center" style="padding: 0.5%">
+  <mat-form-field appearance="outline" style="width: 550px">
+    <mat-label>Copy your link here!</mat-label>
+    <input matInput placeholder="http://psalguero.me">
+    <mat-icon style="cursor: pointer;" (click)="processCutUrl()" matSuffix>send</mat-icon>
+  </mat-form-field>
+</div>

@@ -1,15 +1,13 @@
-<mat-progress-bar  *ngIf="loading" class="example-margin" [color]="'warn'" [mode]="'indeterminate'" [value]="'100'">
+<mat-progress-bar *ngIf="loading" class="example-margin" [color]="'warn'" [mode]="'indeterminate'" [value]="'100'">
 </mat-progress-bar>
 
-<div class="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="0.4%" fxLayoutAlign="center center">
-
-  <div fxLayout="wrap">
-    <h3 style="color: blue;">Interceptors fault tolerant 
-      <button color="primary"  (click)="loadUsers()"  mat-button>
-        <mat-icon>refresh</mat-icon>
-      </button>
-    </h3>
+<section class="wave">
+  <div class="">
+    <h3 class="title">Interceptors fault tolerant</h3>
   </div>
+</section>
+
+<div class="container" fxLayout="row wrap" fxLayoutAlign="center center">
 
   <mat-card class="example-card" *ngFor="let user of users">
     <mat-card-header>
@@ -20,4 +18,11 @@
       <mat-card-subtitle>{{ user.email | lowercase }}</mat-card-subtitle>
     </mat-card-header>
   </mat-card>
+</div>
+
+
+<div fxLayoutAlign="right">
+  <button mat-fab color="primary" (click)="loadUsers()" >
+    <mat-icon>refresh</mat-icon>
+  </button>
 </div>

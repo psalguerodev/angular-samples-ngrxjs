@@ -4,6 +4,7 @@
 
 .container {
   padding: 0.5%;
+  margin: auto;
 }
 
 ::selection {
@@ -51,6 +52,8 @@ mat-icon{
 section {
   width: 100%;
   min-height: 430px;
+  z-index: -1;
+  position relative;
 }
 
 h1,
@@ -72,19 +75,24 @@ h6 {
   line-height: 300px;
   text-align: center;
   color: white;
-  font-size: 4rem;
+  word-wrap: break-word;
+  font-size: 55px;
   text-shadow: 0 1px 0 rgba(black, .1);
 }
 
+.button-center {
+  position: relative;
+  margin: auto;
+}
+
 .index {
-   position: absolute;
+  position: absolute;
   z-index: 1;
 }
 
 .wave {
   position: relative;
   background: linear-gradient(90deg, #027df0, #3a30ca);
-  z-index: -1;
 }
 
 .logo-image {

@@ -9,13 +9,17 @@
       <mat-icon>home</mat-icon>
       <span>Samples</span>
     </button>
-    <button mat-menu-item (click)="openUrlRepo()">
-      <mat-icon>code</mat-icon>
-      <span>GitHub Repo</span>
-    </button>
     <button mat-menu-item (click)="nav('interceptors')" >
       <mat-icon>http</mat-icon>
       <span>Interceptors</span>
+    </button>
+    <button mat-menu-item (click)="nav('shortener')" >
+      <mat-icon>link</mat-icon>
+      <span>Shortener</span>
+    </button>
+    <button mat-menu-item (click)="openUrlRepo()">
+      <mat-icon>code</mat-icon>
+      <span>GitHub Repo</span>
     </button>
     <button mat-menu-item disabled>
       <mat-icon>sync_problem</mat-icon>

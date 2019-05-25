@@ -3,8 +3,10 @@ import { MatToolbarModule,
          MatCardModule,
          MatGridListModule,
          MatButtonModule,
+         MatBadgeModule,
          MatTooltipModule,
          MatIconModule,
+         MatInputModule,
          MatMenuModule,
          MatDialogModule,
          MatProgressBarModule} from '@angular/material';
@@ -23,7 +25,9 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     MatMenuModule,
     MatDialogModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatInputModule,
+    MatBadgeModule
   ],
   exports: [
     MatToolbarModule,
@@ -34,7 +38,9 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     MatMenuModule,
     MatDialogModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatInputModule,
+    MatBadgeModule
   ]
 })
 export class MaterialModule { }
