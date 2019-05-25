@@ -9,8 +9,8 @@ import {
   HttpErrorResponse
 } from '@angular/common/http';
 
-import { Observable, throwError, timer, of } from 'rxjs';
-import { map, catchError, retry, retryWhen, delay, tap, delayWhen, filter, concatMap } from 'rxjs/operators';
+import { Observable, throwError, of } from 'rxjs';
+import { map, catchError, retryWhen, delay, tap, concatMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'

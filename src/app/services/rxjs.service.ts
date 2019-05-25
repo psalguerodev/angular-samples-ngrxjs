@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { interval, fromEvent, of, forkJoin, Observable, throwError, from } from 'rxjs';
-import { map, filter, catchError, retry, mergeMap, delay } from 'rxjs/operators';
+import { map, filter, catchError, mergeMap, delay } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { ServiceBaseService } from './service-base.service';
 
@@ -98,7 +98,7 @@ export class RxjsService extends ServiceBaseService {
       })
     );
 
-    const subscriptionHttp = userNames.subscribe((value) => {
+    userNames.subscribe((value) => {
       console.log('Value Mergemap' , value);
     });
   }
