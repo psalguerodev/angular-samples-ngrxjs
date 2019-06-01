@@ -2,7 +2,7 @@
   <h1 class="title"> Reactive JS</h1>
 </section>
 <!-- fxLayoutAlign="center" -->
-<div class="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="0.4%" fxLayoutAlign="center center">
+<div class="cardList" fxLayout="column" fxLayoutGap="32px" fxLayoutAlign="center">
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
@@ -11,7 +11,7 @@
       </mat-card-title>
       <mat-card-subtitle>Timer observable | 10 seconds </mat-card-subtitle>
     </mat-card-header>
-    <mat-card-actions fxLayoutAlign="center center">
+    <mat-card-actions>
       <button matTooltip="10 SECONDS TO DEACTIVATE" (click)="rxjsService?.intervalMethod()" mat-stroked-button
         color="primary">EXECUTE</button>
     </mat-card-actions>
