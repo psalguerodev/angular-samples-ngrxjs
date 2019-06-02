@@ -12,7 +12,7 @@
       <mat-card-subtitle>Timer observable | 10 seconds </mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions>
-      <button matTooltip="10 SECONDS TO DEACTIVATE" (click)="rxjsService?.intervalMethod()" mat-stroked-button
+      <button class="full-width" matTooltip="10 SECONDS TO DEACTIVATE" (click)="rxjsService?.intervalMethod()" mat-stroked-button
         color="primary">EXECUTE</button>
     </mat-card-actions>
   </mat-card>
@@ -24,7 +24,7 @@
       <mat-card-subtitle>Event Dom | Mouse Event example</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions fxLayoutAlign="center center">
-      <button matTooltip="UPPER CORNER LEFT TO DEACTIVATE" (click)="rxjsService?.fromEventMethod()" mat-stroked-button
+      <button class="full-width" matTooltip="UPPER CORNER LEFT TO DEACTIVATE" (click)="rxjsService?.fromEventMethod()" mat-stroked-button
         color="primary">EXECUTE</button>
     </mat-card-actions>
   </mat-card>
@@ -36,7 +36,7 @@
       <mat-card-subtitle>Mapping result</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions fxLayoutAlign="center center">
-      <button (click)="rxjsService?.mapMethod()" mat-stroked-button color="primary">EXECUTE</button>
+      <button class="full-width" (click)="rxjsService?.mapMethod()" mat-stroked-button color="primary">EXECUTE</button>
     </mat-card-actions>
   </mat-card>
   <mat-card class="example-card">
@@ -47,7 +47,7 @@
       <mat-card-subtitle>Filter results of response</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions fxLayoutAlign="center center">
-      <button (click)="rxjsService?.filterMapMethod()" mat-stroked-button color="primary">EXECUTE</button>
+      <button class="full-width" (click)="rxjsService?.filterMapMethod()" mat-stroked-button color="primary">EXECUTE</button>
     </mat-card-actions>
   </mat-card>
   <mat-card class="example-card">
@@ -58,7 +58,7 @@
       <mat-card-subtitle>Multiple request | Not tolerable to error</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions fxLayoutAlign="center center">
-      <button matTooltip="ALL THE CORRECT REQUEST TO ANSWER" (click)="rxjsService?.forkJoinMethod()" mat-stroked-button
+      <button class="full-width" matTooltip="ALL THE CORRECT REQUEST TO ANSWER" (click)="rxjsService?.forkJoinMethod()" mat-stroked-button
         color="primary">EXECUTE</button>
     </mat-card-actions>
   </mat-card>
@@ -70,7 +70,7 @@
       <mat-card-subtitle>Multiple request | Yes tolerable to error</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions fxLayoutAlign="center center">
-      <button matTooltip="ALL THE CORRECT REQUEST TO ANSWER" (click)="rxjsService?.mergeMapMethod()" mat-stroked-button
+      <button class="full-width" matTooltip="ALL THE CORRECT REQUEST TO ANSWER" (click)="rxjsService?.mergeMapMethod()" mat-stroked-button
         color="primary">EXECUTE</button>
     </mat-card-actions>
   </mat-card>
